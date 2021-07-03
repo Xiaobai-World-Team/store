@@ -9,7 +9,14 @@ enum TabEnum {
 }
 
 function Publish() {
-  const [active, setActive] = useState(TabEnum.YOUR_APP)
+  const [tabs, setActive] = useState([
+    '全部',
+    '设计师',
+    '前端',
+    '后端',
+    'Docker',
+    '云原生'
+  ])
 
   useEffect(() => {
 
@@ -19,16 +26,12 @@ function Publish() {
   return (
     <div className="xiaobai-world-store-your-app">
       <aside>
-        <a
-          className={active === TabEnum.YOUR_APP ? 'active' : ''}
-          onClick={() => setActive(TabEnum.YOUR_APP)}>Your's</a>
-        <a
-          className={active === TabEnum.NEW_APP ? 'active' : ''}
-          onClick={() => setActive(TabEnum.NEW_APP)}>New App</a>
+        {tabs.map(tab => {
+          return <a key={tab}>{tab}</a>
+        })}
       </aside>
       <main>
-        {active === TabEnum.YOUR_APP ? <YourApp /> : null}
-        {active === TabEnum.NEW_APP ? <NewApp /> : null}
+        1
       </main>
     </div >
   )

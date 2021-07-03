@@ -5,8 +5,8 @@
   flex-direction: column;
   > .xiaobai-world-store-tabs {
     display: flex;
-    border-bottom: solid 1px #aaa;
-
+    border-bottom: solid 1px rgb(243, 243, 243);
+    user-select: none;
     > a {
       flex: 1 1 0;
       text-align: center;
@@ -14,9 +14,11 @@
       font-size: 18px;
       color: #333;
       text-decoration: none;
+      transition: all .2s;
       &.active {
         font-weight: bold;
-        box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 -3px 0 currentColor;
+        color: rgb(0, 173, 107);
       }
     }
   }
