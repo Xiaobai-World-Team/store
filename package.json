@@ -11,7 +11,7 @@
         "serve": "vite preview"
     },
     "dependencies": {
-        "@xiaobai-world/api": "0.0.21",
+        "@xiaobai-world/api": "0.0.26",
         "axios": "^0.21.1",
         "react": "^17.0.0",
         "react-dom": "^17.0.0"
